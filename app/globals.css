@@ -50,7 +50,7 @@
   --cream: oklch(0.92 0.02 45);
 
   /* Verde claro para seção de contato */
-  --green-light: oklch(0.55 0.06 140);
+  --green-light: #f5f5dc;
 
   /* Cores dos gráficos */
   --chart-1: oklch(0.7 0.15 75);
