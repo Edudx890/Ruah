@@ -5,7 +5,7 @@
 
 :root {
   /* Verde desidratado como fundo principal */
-  --background: #f5f5dc;
+  --background: #7e6e43;
   --foreground: oklch(0.92 0.02 45);
 
   /* Off-white para cards ao invés de dourado envelhecido */
