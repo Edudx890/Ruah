@@ -5,7 +5,7 @@
 
 :root {
   /* Verde desidratado como fundo principal */
-  --background: #7e6e43;
+  --background: oklch(46.024% 0.02953 102.521);
   --foreground: oklch(0.92 0.02 45);
 
   /* Off-white para cards ao invés de dourado envelhecido */
@@ -50,7 +50,7 @@
   --cream: oklch(0.92 0.02 45);
 
   /* Verde claro para seção de contato */
-  --green-light: #f5f5dc;
+  --green-light: oklch(0.55 0.06 140);
 
   /* Cores dos gráficos */
   --chart-1: oklch(0.7 0.15 75);
