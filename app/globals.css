@@ -4,105 +4,63 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Verde desidratado como fundo principal */
-  --background: oklch(46.024% 0.02953 102.521);
-  --foreground: oklch(0.92 0.02 45);
+  /* Paleta RUAH baseada no HTML de referencia */
+  --ruah-brown: #3E2723;
+  --ruah-brown-dark: #2C1810;
+  --ruah-brown-light: #5D4037;
+  --ruah-gold: #C9A961;
+  --ruah-gold-light: #D4AF37;
+  --ruah-cream: #FAF7F0;
+  --ruah-beige: #F5F1E8;
+  --ruah-sand: #EBE5D9;
+  --ruah-warm-white: #F9F7F2;
+  --ruah-text: #4A3728;
 
-  /* Off-white para cards ao invés de dourado envelhecido */
-  --card: oklch(0.96 0.01 45);
-  --card-foreground: oklch(0.25 0.02 140);
+  /* Design tokens mapeados para a paleta RUAH */
+  --background: var(--ruah-cream);
+  --foreground: var(--ruah-text);
 
-  /* Cores do popover */
-  --popover: oklch(0.96 0.01 45);
-  --popover-foreground: oklch(0.25 0.02 140);
+  --card: var(--ruah-cream);
+  --card-foreground: var(--ruah-brown);
 
-  /* Dourado vibrante para elementos primários */
-  --primary: oklch(0.7 0.15 75);
-  --primary-foreground: oklch(0.15 0 0);
+  --popover: var(--ruah-cream);
+  --popover-foreground: var(--ruah-brown);
 
-  /* Cores secundárias */
-  --secondary: oklch(0.5 0.04 140);
-  --secondary-foreground: oklch(0.92 0.02 45);
+  --primary: var(--ruah-gold);
+  --primary-foreground: var(--ruah-brown);
 
-  /* Cores suavizadas */
-  --muted: oklch(0.48 0.04 140);
-  --muted-foreground: oklch(0.85 0.02 45);
+  --secondary: var(--ruah-beige);
+  --secondary-foreground: var(--ruah-brown);
 
-  /* Cores de destaque */
-  --accent: oklch(0.7 0.15 75);
-  --accent-foreground: oklch(0.15 0 0);
+  --muted: var(--ruah-sand);
+  --muted-foreground: var(--ruah-brown-light);
 
-  /* Cores destrutivas */
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.92 0.02 45);
+  --accent: var(--ruah-gold);
+  --accent-foreground: var(--ruah-brown);
 
-  /* Bordas e inputs */
-  --border: oklch(0.6 0.08 65);
-  --input: oklch(0.5 0.04 140);
-  --ring: oklch(0.7 0.15 75);
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
 
-  /* Dourado vibrante e dourado envelhecido */
-  --gold: #cfb373;
+  --border: var(--ruah-sand);
+  --input: var(--ruah-sand);
+  --ring: var(--ruah-gold);
 
-  --gold-aged: oklch(0.55 0.08 65);
+  --chart-1: var(--ruah-gold);
+  --chart-2: var(--ruah-brown);
+  --chart-3: var(--ruah-brown-light);
+  --chart-4: var(--ruah-sand);
+  --chart-5: var(--ruah-beige);
 
-  /* Creme para textos */
-  --cream: oklch(0.92 0.02 45);
+  --radius: 0.125rem;
 
-  /* Verde claro para seção de contato */
-  --green-light: oklch(0.55 0.06 140);
-
-  /* Cores dos gráficos */
-  --chart-1: oklch(0.7 0.15 75);
-  --chart-2: oklch(0.55 0.08 65);
-  --chart-3: oklch(0.45 0.04 140);
-  --chart-4: oklch(0.92 0.02 45);
-  --chart-5: oklch(0.6 0.08 65);
-
-  --radius: 0.625rem;
-  --sidebar: oklch(0.5 0.04 140);
-  --sidebar-foreground: oklch(0.92 0.02 45);
-  --sidebar-primary: oklch(0.7 0.15 75);
-  --sidebar-primary-foreground: oklch(0.15 0 0);
-  --sidebar-accent: oklch(0.55 0.08 65);
-  --sidebar-accent-foreground: oklch(0.92 0.02 45);
-  --sidebar-border: oklch(0.6 0.08 65);
-  --sidebar-ring: oklch(0.7 0.15 75);
-}
-
-.dark {
-  --background: oklch(0.2 0.02 140);
-  --foreground: oklch(0.92 0.02 45);
-  --card: oklch(0.25 0.02 140);
-  --card-foreground: oklch(0.92 0.02 45);
-  --popover: oklch(0.25 0.02 140);
-  --popover-foreground: oklch(0.92 0.02 45);
-  --primary: oklch(0.7 0.15 75);
-  --primary-foreground: oklch(0.15 0 0);
-  --secondary: oklch(0.3 0.02 140);
-  --secondary-foreground: oklch(0.92 0.02 45);
-  --muted: oklch(0.3 0.02 140);
-  --muted-foreground: oklch(0.85 0.02 45);
-  --accent: oklch(0.7 0.15 75);
-  --accent-foreground: oklch(0.15 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.92 0.02 45);
-  --border: oklch(0.35 0.02 140);
-  --input: oklch(0.3 0.02 140);
-  --ring: oklch(0.7 0.15 75);
-  --chart-1: oklch(0.7 0.15 75);
-  --chart-2: oklch(0.55 0.08 65);
-  --chart-3: oklch(0.45 0.04 140);
-  --chart-4: oklch(0.92 0.02 45);
-  --chart-5: oklch(0.6 0.08 65);
-  --sidebar: oklch(0.25 0.02 140);
-  --sidebar-foreground: oklch(0.92 0.02 45);
-  --sidebar-primary: oklch(0.7 0.15 75);
-  --sidebar-primary-foreground: oklch(0.15 0 0);
-  --sidebar-accent: oklch(0.3 0.02 140);
-  --sidebar-accent-foreground: oklch(0.92 0.02 45);
-  --sidebar-border: oklch(0.35 0.02 140);
-  --sidebar-ring: oklch(0.7 0.15 75);
+  --sidebar: var(--ruah-cream);
+  --sidebar-foreground: var(--ruah-text);
+  --sidebar-primary: var(--ruah-gold);
+  --sidebar-primary-foreground: var(--ruah-brown);
+  --sidebar-accent: var(--ruah-beige);
+  --sidebar-accent-foreground: var(--ruah-brown);
+  --sidebar-border: var(--ruah-sand);
+  --sidebar-ring: var(--ruah-gold);
 }
 
 @theme inline {
@@ -142,14 +100,119 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-gold: var(--gold);
-  --color-gold-aged: var(--gold-aged);
-  --color-cream: var(--cream);
-  --color-green-light: var(--green-light);
 
-  /* Fontes Playfair Display e Open Sans */
-  --font-sans: "Open Sans", system-ui, sans-serif;
+  /* Cores customizadas RUAH */
+  --color-ruah-brown: var(--ruah-brown);
+  --color-ruah-brown-dark: var(--ruah-brown-dark);
+  --color-ruah-brown-light: var(--ruah-brown-light);
+  --color-ruah-gold: var(--ruah-gold);
+  --color-ruah-gold-light: var(--ruah-gold-light);
+  --color-ruah-cream: var(--ruah-cream);
+  --color-ruah-beige: var(--ruah-beige);
+  --color-ruah-sand: var(--ruah-sand);
+  --color-ruah-warm-white: var(--ruah-warm-white);
+  --color-ruah-text: var(--ruah-text);
+
+  /* Fontes: Playfair Display + Lato */
+  --font-sans: "Lato", system-ui, sans-serif;
   --font-serif: "Playfair Display", serif;
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ruah-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ruah-gold);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ruah-brown);
+}
+
+/* Selecao de texto */
+::selection {
+  background-color: var(--ruah-gold);
+  color: #ffffff;
+}
+
+/* Focus acessibilidade */
+*:focus-visible {
+  outline: 2px solid var(--ruah-gold);
+  outline-offset: 2px;
+}
+
+/* Animacao hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Navbar glassmorphism ao rolar */
+.nav-scrolled {
+  background-color: rgba(250, 247, 240, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(62, 39, 35, 0.1);
+}
+
+/* Hover dourado nos cards */
+.service-card-hover:hover {
+  box-shadow: 0 20px 40px -15px rgba(201, 169, 97, 0.3);
+}
+
+/* Botao loading */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 0.8s linear infinite;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Autofill inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--ruah-cream) inset;
+  -webkit-text-fill-color: var(--ruah-text);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
 }
 
 @layer base {
@@ -157,31 +220,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-cream;
+    @apply bg-background text-foreground antialiased;
   }
-}
-
-
-/* === Efeito de sombra dourada sutil nas laterais === */
-.shadow-lateral::before,
-.shadow-lateral::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  width: 30px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 50;
-}
-
-.shadow-lateral::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(218, 165, 32, 0.12), transparent);
-  filter: blur(6px);
-}
-
-.shadow-lateral::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(218, 165, 32, 0.12), transparent);
-  filter: blur(6px);
 }

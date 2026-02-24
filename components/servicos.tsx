@@ -1,16 +1,17 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Building2, Globe, Users, ArrowRight } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Compass, Landmark, ClipboardList, Globe, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 const icones: Record<string, any> = {
-  Building2,
+  Compass,
+  Landmark,
+  ClipboardList,
   Globe,
-  Users,
+  Building2: Compass,
+  Users: Landmark,
 }
 
 interface Servico {
@@ -43,19 +44,17 @@ export function Servicos() {
     try {
       const resposta = await fetch("/api/servicos?limite=4&ativos=true")
       const dados = await resposta.json()
-
       if (dados.sucesso) {
         setServicos(dados.servicos)
       }
 
       const respostaTotal = await fetch("/api/servicos?ativos=true")
       const dadosTotal = await respostaTotal.json()
-
       if (dadosTotal.sucesso) {
         setTotalServicos(dadosTotal.servicos.length)
       }
     } catch (erro) {
-      console.error("Erro ao carregar serviços:", erro)
+      console.error("Erro ao carregar servicos:", erro)
     } finally {
       setCarregando(false)
     }
@@ -76,7 +75,6 @@ export function Servicos() {
   const handleTituloClick = () => {
     const novosCliques = cliquesNoTitulo + 1
     setCliquesNoTitulo(novosCliques)
-
     if (novosCliques === 3) {
       router.push("/login")
     }
@@ -84,60 +82,60 @@ export function Servicos() {
 
   if (carregando) {
     return (
-      <section id="servicos" className="py-24 px-4">
-        <div className="container mx-auto max-w-6xl text-center">
-          <p className="text-cream/70">Carregando serviços...</p>
+      <section id="servicos" className="py-24 md:py-32 bg-ruah-beige">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-ruah-brown-light">Carregando servicos...</p>
         </div>
       </section>
     )
   }
 
   return (
-    <section id="servicos" className="py-24 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <section id="servicos" className="py-24 md:py-32 bg-ruah-beige relative">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20">
+          <span className="text-ruah-gold text-sm tracking-[0.3em] uppercase mb-4 block">
+            Portfolio
+          </span>
           <h2
             onClick={handleTituloClick}
-           data-aos="zoom-in-up" className="font-serif text-4xl md:text-5xl font-bold text-cream mb-4 cursor-default select-none"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-ruah-brown mb-6 cursor-default select-none"
           >
-            Soluções <span className="text-gold">Estratégicas</span>
+            {"SOLU\u00C7\u00D5ES ESTRAT\u00C9GICAS"}
           </h2>
-          <p data-aos="zoom-in-up" className="text-lg text-cream/70 max-w-2xl mx-auto">
-            Oferecemos um portfólio completo de serviços para conectar o setor privado ao público com excelência
+          <p className="text-ruah-brown-light text-lg md:text-xl max-w-2xl mx-auto font-light">
+            Oferecemos um portfolio completo de servicos para conectar o setor privado ao publico com excelencia
           </p>
-          <div data-aos="zoom-in-up" className="mt-6 w-24 h-1 bg-gold rounded-full mx-auto" />
+          <div className="w-24 h-0.5 bg-ruah-gold mx-auto mt-8" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {servicos.map((servico) => {
-            const Icone = icones[servico.icone] || Building2
+            const Icone = icones[servico.icone] || Compass
             return (
-              <Card
+              <div
                 key={servico.id}
                 onClick={() => incrementarAcesso(servico.id)}
-               data-aos="zoom-in-up" className="border-border bg-card hover:border-gold transition-all duration-300 hover:shadow-lg hover:shadow-gold/50 cursor-pointer"
+                className="group bg-ruah-cream p-8 rounded-sm shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-ruah-gold/30 service-card-hover cursor-pointer"
               >
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center mb-4 border-2 border-gold/20">
-                    <Icone className="w-7 h-7 text-gold" />
-                  </div>
-                  <CardTitle className="font-serif text-xl text-card-foreground">{servico.titulo}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-card-foreground/70 leading-relaxed">{servico.descricao}</p>
-                </CardContent>
-              </Card>
+                <div className="w-14 h-14 flex items-center justify-center mb-6 text-ruah-gold group-hover:scale-110 transition-transform duration-300">
+                  <Icone className="w-10 h-10" strokeWidth={1} />
+                </div>
+                <h3 className="font-serif text-2xl text-ruah-brown mb-4">{servico.titulo}</h3>
+                <p className="text-ruah-brown-light leading-relaxed text-sm">{servico.descricao}</p>
+              </div>
             )
           })}
         </div>
 
         {totalServicos > 4 && (
           <div className="text-center mt-12">
-            <Link href="/servicos">
-              <Button className="bg-gold hover:bg-gold/90 text-primary-foreground font-medium px-8 py-6 text-base shadow-lg shadow-gold/20">
-                Ver Todos os Serviços
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+            <Link
+              href="/servicos"
+              className="inline-flex items-center border-2 border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300"
+            >
+              Ver Todos os Servicos
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
         )}

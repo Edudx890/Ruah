@@ -1,10 +1,9 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Playfair_Display, Open_Sans } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Playfair_Display, Lato } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "@/components/ui/toaster"
 import { Suspense } from "react"
-import AOSInitializer from "./AOSInitializer"
 import "./globals.css"
 
 const playfairDisplay = Playfair_Display({
@@ -13,17 +12,23 @@ const playfairDisplay = Playfair_Display({
   display: "swap",
 })
 
-const openSans = Open_Sans({
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-open-sans",
+  weight: ["300", "400", "700"],
+  variable: "--font-lato",
   display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "RUAH - Assessoria, Consultoria e Comércio",
+  title: "RUAH Assessoria | Conectando Setores, Construindo Futuros",
   description:
-    "Conectando setores, construindo futuros. Ponte estratégica entre o setor privado e a esfera governamental.",
-  generator: "v0.app",
+    "Assessoria estrategica de alto padrao conectando setor privado e governamental. Excelencia em consultoria, gestao de projetos e comercio internacional.",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#3E2723",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function LayoutRaiz({
@@ -33,12 +38,8 @@ export default function LayoutRaiz({
 }>) {
   return (
     <html lang="pt-BR">
-<body
-  className={`font-sans ${playfairDisplay.variable} ${openSans.variable} bg-green-light relative overflow-x-hidden shadow-lateral`}
->
-
+      <body className={`font-sans ${playfairDisplay.variable} ${lato.variable}`}>
         <Suspense fallback={null}>
-          <AOSInitializer />
           {children}
           <Toaster />
         </Suspense>

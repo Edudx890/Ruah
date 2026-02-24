@@ -208,15 +208,15 @@ export function PainelAdmin() {
 
         {/* Formulário de adicionar */}
         {mostrarFormulario && (
-          <Card className="mb-12 border-gold bg-card">
+          <Card className="mb-12 border-gold bg-gold-aged">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl text-card-foreground">Novo Serviço</CardTitle>
-              <CardDescription className="text-card-foreground/70">Preencha os dados do novo serviço</CardDescription>
+              <CardTitle className="font-serif text-2xl text-cream">Novo Serviço</CardTitle>
+              <CardDescription className="text-cream/70">Preencha os dados do novo serviço</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={adicionarServico} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-card-foreground mb-2">Título</label>
+                  <label className="block text-sm font-medium text-cream mb-2">Título</label>
                   <Input
                     type="text"
                     name="titulo"
@@ -227,7 +227,7 @@ export function PainelAdmin() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-card-foreground mb-2">Descrição</label>
+                  <label className="block text-sm font-medium text-cream mb-2">Descrição</label>
                   <Textarea
                     name="descricao"
                     placeholder="Descrição detalhada do serviço"
@@ -238,7 +238,7 @@ export function PainelAdmin() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-card-foreground mb-2">Ícone</label>
+                  <label className="block text-sm font-medium text-cream mb-2">Ícone</label>
                   <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                     {iconesDisponiveis.map((item) => {
                       const IconeComponente = item.icone
@@ -262,13 +262,13 @@ export function PainelAdmin() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-card-foreground mb-2">Ordem (opcional)</label>
+                  <label className="block text-sm font-medium text-cream mb-2">Ordem (opcional)</label>
                   <Input
                     type="number"
                     name="ordem"
                     placeholder="0"
                     defaultValue={0}
-                    className="bg-background border-border text-card-foreground placeholder:text-cream/50"
+                    className="bg-background border-border text-cream placeholder:text-cream/50"
                   />
                 </div>
 
@@ -292,7 +292,7 @@ export function PainelAdmin() {
             {servicos.map((servico) => {
               const IconeItem = iconesDisponiveis.find((i) => i.nome === servico.icone)?.icone || Building2
               return (
-                <Card key={servico.id} className="border-border bg-card">
+                <Card key={servico.id} className="border-border bg-gold-aged">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-4 flex-1">
@@ -300,9 +300,9 @@ export function PainelAdmin() {
                           <IconeItem className="w-6 h-6 text-gold" />
                         </div>
                         <div className="flex-1">
-                          <h3 className="font-serif text-xl text-card-foreground mb-2">{servico.titulo}</h3>
-                          <p className="text-card-foreground/70 text-sm mb-3">{servico.descricao}</p>
-                          <div className="flex gap-4 text-xs text-card-foreground/60">
+                          <h3 className="font-serif text-xl text-cream mb-2">{servico.titulo}</h3>
+                          <p className="text-cream/70 text-sm mb-3">{servico.descricao}</p>
+                          <div className="flex gap-4 text-xs text-cream/60">
                             <span>Ordem: {servico.ordem}</span>
                             <span>Acessos: {servico.acessos}</span>
                             <span>Status: {servico.ativo ? "Ativo" : "Inativo"}</span>
@@ -327,9 +327,9 @@ export function PainelAdmin() {
             })}
 
             {servicos.length === 0 && (
-              <Card className="border-border bg-card">
+              <Card className="border-border bg-gold-aged">
                 <CardContent className="p-12 text-center">
-                  <p className="text-card-foreground/70">Nenhum serviço cadastrado ainda</p>
+                  <p className="text-cream/70">Nenhum serviço cadastrado ainda</p>
                 </CardContent>
               </Card>
             )}

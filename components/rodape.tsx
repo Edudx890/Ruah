@@ -1,42 +1,16 @@
-import { Mail, Phone } from "lucide-react"
-
 export function Rodape() {
   return (
-    <footer className="bg-card py-12 px-4 border-t border-gold/20">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Logo */}
-          <div>
-            <div className="text-3xl font-serif font-bold text-background mb-2">RUAH</div>
-            <p className="text-sm text-background/70">Assessoria, Consultoria e Comércio</p>
+    <footer className="bg-ruah-brown text-ruah-beige py-12 border-t-4 border-ruah-gold">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <h4 className="font-serif text-2xl mb-2 text-ruah-beige">RUAH</h4>
+            <p className="text-sm text-ruah-sand">Assessoria, Consultoria e Comercio</p>
           </div>
-
-          {/* Informações de Contato */}
-          <div className="space-y-3">
-            <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-gold" />
-              <a
-                href="https://wa.me/5579988565263"
-                className="text-sm text-card-foreground hover:text-gold transition-colors"
-              >
-                +55 79 8856-5263
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-gold" />
-              <a
-                href="mailto:ruah.assconsult@gmail.com"
-                className="text-sm text-card-foreground hover:text-gold transition-colors"
-              >
-                ruah.assconsult@gmail.com
-              </a>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="text-sm text-card-foreground/70 md:text-right">
-            <p>© {new Date().getFullYear()} RUAH</p>
-            <p>Todos os direitos reservados</p>
+          <div className="text-center md:text-right">
+            <p className="text-sm text-ruah-sand">
+              &copy; {new Date().getFullYear()} RUAH. Todos os direitos reservados.
+            </p>
           </div>
         </div>
       </div>

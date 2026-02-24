@@ -15,10 +15,17 @@ interface Usuario {
 
 export function Cabecalho() {
   const [menuAberto, setMenuAberto] = useState(false)
+  const [rolou, setRolou] = useState(false)
   const [usuario, setUsuario] = useState<Usuario | null>(null)
 
   useEffect(() => {
     verificarUsuario()
+
+    const aoRolar = () => {
+      setRolou(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", aoRolar)
+    return () => window.removeEventListener("scroll", aoRolar)
   }, [])
 
   const verificarUsuario = async () => {
@@ -29,7 +36,7 @@ export function Cabecalho() {
         setUsuario(dados.usuario)
       }
     } catch (erro) {
-      console.error("[v0] Erro ao verificar usuário:", erro)
+      console.error("Erro ao verificar usuario:", erro)
     }
   }
 
@@ -39,7 +46,7 @@ export function Cabecalho() {
       setUsuario(null)
       window.location.href = "/"
     } catch (erro) {
-      console.error("[v0] Erro ao fazer logout:", erro)
+      console.error("Erro ao fazer logout:", erro)
     }
   }
 
@@ -48,136 +55,147 @@ export function Cabecalho() {
       window.location.href = `/#${id}`
       return
     }
-
     const elemento = document.getElementById(id)
     if (elemento) {
-      elemento.scrollIntoView({ behavior: "smooth" })
+      const deslocamento = 80
+      const posicao = elemento.getBoundingClientRect().top + window.pageYOffset - deslocamento
+      window.scrollTo({ top: posicao, behavior: "smooth" })
       setMenuAberto(false)
     }
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-2">
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${rolou ? "nav-scrolled" : "bg-transparent"}`}
+    >
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="relative block">
             <Image
-              src="/images/logo-ruah-transparente.png"
-              alt="RUAH Assessoria, Consultoria e Comércio"
-              width={200}
-              height={50}
-              className="h-16 w-40"
+              src="/images/logo-ruah.jpeg"
+              alt="RUAH Assessoria, Consultoria e Comercio"
+              width={120}
+              height={60}
+              className="h-10 md:h-14 w-auto object-contain rounded-sm transition-all duration-300"
+              style={{
+                filter: rolou ? "none" : "brightness(1.8) contrast(0.9)",
+              }}
               priority
             />
           </Link>
 
-          {/* Navegação Desktop */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Menu Desktop */}
+          <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => rolarParaSecao("inicio")}
-              className="text-sm font-medium text-cream hover:text-gold transition-colors"
+              className="text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:text-ruah-gold"
+              style={{ color: rolou ? "#5D4037" : "#FAF7F0" }}
             >
-              Início
+              Sobre
             </button>
             <button
-              onClick={() => rolarParaSecao("sobre")}
-              className="text-sm font-medium text-cream hover:text-gold transition-colors"
+              onClick={() => rolarParaSecao("servicos")}
+              className="text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:text-ruah-gold"
+              style={{ color: rolou ? "#5D4037" : "#FAF7F0" }}
             >
-              Sobre Nós
+              Servicos
             </button>
-            <Link href="/servicos" className="text-sm font-medium text-cream hover:text-gold transition-colors">
-              Serviços
-            </Link>
             <button
               onClick={() => rolarParaSecao("contato")}
-              className="text-sm font-medium text-cream hover:text-gold transition-colors"
+              className="text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:text-ruah-gold"
+              style={{ color: rolou ? "#5D4037" : "#FAF7F0" }}
             >
               Contato
             </button>
 
+            {/* Botoes Admin */}
             {usuario && (usuario.role === "master" || usuario.role === "admin2") && (
-              <div className="flex items-center gap-3 ml-4 pl-4 border-l border-border">
-                <span className="text-sm text-cream/70">{usuario.nome}</span>
+              <div className="flex items-center gap-3 ml-4 pl-4 border-l border-ruah-sand">
+                <span className="text-sm" style={{ color: rolou ? "#5D4037" : "#FAF7F0" }}>
+                  {usuario.nome}
+                </span>
                 <Link href="/admin">
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-gold text-gold hover:bg-gold hover:text-primary-foreground bg-transparent"
+                    className="border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown bg-transparent"
                   >
                     <Settings className="w-4 h-4 mr-1" />
                     Admin
                   </Button>
                 </Link>
-                <Button size="sm" variant="g" onClick={sair} className="text-cream hover:text-gold">
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={sair}
+                  className="hover:text-ruah-gold"
+                  style={{ color: rolou ? "#5D4037" : "#FAF7F0" }}
+                >
                   <LogOut className="w-4 h-4" />
                 </Button>
               </div>
             )}
-          </nav>
+          </div>
 
-          {/* Botão Menu Mobile */}
+          {/* Botao Menu Mobile */}
           <button
             onClick={() => setMenuAberto(!menuAberto)}
-            className="md:hidden p-2 text-cream hover:text-gold transition-colors"
-            aria-label="Alternar menu"
+            className="md:hidden"
+            style={{ color: rolou ? "#3E2723" : "#FAF7F0" }}
+            aria-label="Menu"
           >
-            {menuAberto ? <X size={24} /> : <Menu size={24} />}
+            {menuAberto ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Navegação Mobile */}
-        {menuAberto && (
-          <nav className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
-              <button
-                onClick={() => rolarParaSecao("inicio")}
-                className="text-left text-sm font-medium text-cream hover:text-gold transition-colors py-2"
-              >
-                Início
-              </button>
-              <button
-                onClick={() => rolarParaSecao("sobre")}
-                className="text-left text-sm font-medium text-cream hover:text-gold transition-colors py-2"
-              >
-                Sobre Nós
-              </button>
-              <Link
-                href="/servicos"
-                className="text-left text-sm font-medium text-cream hover:text-gold transition-colors py-2"
-              >
-                Serviços
-              </Link>
-              <button
-                onClick={() => rolarParaSecao("contato")}
-                className="text-left text-sm font-medium text-cream hover:text-gold transition-colors py-2"
-              >
-                Contato
-              </button>
-
-              {usuario && (usuario.role === "master" || usuario.role === "admin2") && (
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-cream mb-2">Admin: {usuario.nome}</p>
-                  <Link href="/admin" className="block py-2">
-                    <Button size="sm" className="w-full bg-gold hover:bg-gold/90 text-primary-foreground">
-                      <Settings className="w-4 h-4 mr-2" />
-                      Painel Admin
-                    </Button>
-                  </Link>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={sair}
-                    className="w-full mt-2 border-gold text-gold hover:bg-gold hover:text-primary-foreground bg-transparent"
-                  >
-                    <LogOut className="w-4 h-4 mr-2" />
-                    Sair
-                  </Button>
-                </div>
-              )}
-            </div>
-          </nav>
-        )}
       </div>
-    </header>
+
+      {/* Menu Mobile */}
+      {menuAberto && (
+        <div className="md:hidden bg-ruah-cream border-t border-ruah-sand absolute w-full shadow-lg">
+          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+            <button
+              onClick={() => rolarParaSecao("inicio")}
+              className="text-left text-ruah-brown hover:text-ruah-gold transition-colors py-2 border-b border-ruah-sand"
+            >
+              Sobre
+            </button>
+            <button
+              onClick={() => rolarParaSecao("servicos")}
+              className="text-left text-ruah-brown hover:text-ruah-gold transition-colors py-2 border-b border-ruah-sand"
+            >
+              Servicos
+            </button>
+            <button
+              onClick={() => rolarParaSecao("contato")}
+              className="text-left text-ruah-brown hover:text-ruah-gold transition-colors py-2"
+            >
+              Contato
+            </button>
+
+            {usuario && (usuario.role === "master" || usuario.role === "admin2") && (
+              <div className="pt-4 border-t border-ruah-sand">
+                <p className="text-sm text-ruah-brown-light mb-2">Admin: {usuario.nome}</p>
+                <Link href="/admin" className="block py-2">
+                  <Button size="sm" className="w-full bg-ruah-gold hover:bg-ruah-gold-light text-ruah-brown">
+                    <Settings className="w-4 h-4 mr-2" />
+                    Painel Admin
+                  </Button>
+                </Link>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={sair}
+                  className="w-full mt-2 border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown bg-transparent"
+                >
+                  <LogOut className="w-4 h-4 mr-2" />
+                  Sair
+                </Button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </nav>
   )
 }
