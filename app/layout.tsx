@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "RUAH Assessoria | Conectando Setores, Construindo Futuros",
   description:
     "Assessoria estrategica de alto padrao conectando setor privado e governamental. Excelencia em consultoria, gestao de projetos e comercio internacional.",
+    generator: 'v0.app'
 }
 
 export const viewport: Viewport = {

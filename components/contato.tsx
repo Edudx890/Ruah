@@ -144,9 +144,12 @@ export function Contato() {
                   <Phone className="w-5 h-5 text-ruah-gold" />
                 </div>
                 <div>
-                  <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Telefone</p>
-                  <a href="tel:+557988565263" className="text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors">
-                    +55 79 8856-5263
+                  <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Telefones</p>
+                  <a href="tel:+557998856-5263" className="block text-ruah-brown-light hover:text-ruah-gold transition-colors">
+                    +55 (79) 9 8856-5263
+                  </a>
+                  <a href="tel:+553197232-5289" className="block text-ruah-brown-light hover:text-ruah-gold transition-colors">
+                    +55 (31) 9 7232-5289
                   </a>
                 </div>
               </div>
@@ -157,7 +160,7 @@ export function Contato() {
                 </div>
                 <div>
                   <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Email</p>
-                  <a href="mailto:ruah.assconsult@gmail.com" className="text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors">
+                  <a href="mailto:ruah.assconsult@gmail.com" className="text-ruah-brown-light hover:text-ruah-gold transition-colors">
                     ruah.assconsult@gmail.com
                   </a>
                 </div>
@@ -168,8 +171,9 @@ export function Contato() {
                   <MapPin className="w-5 h-5 text-ruah-gold" />
                 </div>
                 <div>
-                  <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Atuacao</p>
-                  <p className="text-lg text-ruah-brown-light">Nacional e Internacional</p>
+                  <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Escritorio</p>
+                  <p className="text-ruah-brown-light">SAUS Q 5 BL K N 17, Sala 0403</p>
+                  <p className="text-ruah-brown-light">Asa Sul, Brasilia - DF</p>
                 </div>
               </div>
             </div>

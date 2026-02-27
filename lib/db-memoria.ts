@@ -73,14 +73,14 @@ async function inicializarDados() {
       criado_em: new Date(),
     })
 
-    // Criar serviços padrão
+    // Criar servicos padrao baseados nos pilares da proposta comercial
     servicos.push(
       {
         id: proximoIdServico++,
-        titulo: "Consultoria Estratégica",
+        titulo: "Gestao Publica",
         descricao:
-          "Análise profunda e desenvolvimento de estratégias personalizadas para conectar sua empresa ao setor público.",
-        icone: "Briefcase",
+          "Consultoria estrategica, assessoria em licitacoes, gestao de projetos, compliance e reengenharia administrativa para municipios.",
+        icone: "Landmark",
         ordem: 1,
         acessos: 150,
         ativo: true,
@@ -89,10 +89,10 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Assessoria Governamental",
+        titulo: "Educacao",
         descricao:
-          "Acompanhamento especializado em processos governamentais, licitações e relacionamento institucional.",
-        icone: "Building2",
+          "Apoio tecnico ao PAR/FNDE, formacao continuada de professores, curriculo alinhado a BNCC e captacao de recursos federais.",
+        icone: "GraduationCap",
         ordem: 2,
         acessos: 120,
         ativo: true,
@@ -101,9 +101,10 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Gestão de Projetos",
-        descricao: "Planejamento e execução de projetos complexos com foco em resultados e compliance regulatório.",
-        icone: "ClipboardList",
+        titulo: "Saude e Assistencia Social",
+        descricao:
+          "Assessoria tecnica na gestao do SUS, fortalecimento do SUAS, monitoramento de indicadores e captacao de repasses federais.",
+        icone: "HeartPulse",
         ordem: 3,
         acessos: 95,
         ativo: true,
@@ -112,11 +113,36 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Comércio Internacional",
-        descricao: "Facilitação de negócios internacionais e conexões estratégicas entre mercados público e privado.",
+        titulo: "Relacoes Internacionais",
+        descricao:
+          "Suporte a embaixadas e organismos internacionais, gestao de eventos diplomaticos e cerimonial de Estado.",
         icone: "Globe",
         ordem: 4,
         acessos: 80,
+        ativo: true,
+        criado_por: 1,
+        criado_em: new Date(),
+      },
+      {
+        id: proximoIdServico++,
+        titulo: "Controladoria",
+        descricao:
+          "Programas de integridade, auditoria interna, transparencia publica e saneamento de pendencias junto ao CAUC.",
+        icone: "ShieldCheck",
+        ordem: 5,
+        acessos: 70,
+        ativo: true,
+        criado_por: 1,
+        criado_em: new Date(),
+      },
+      {
+        id: proximoIdServico++,
+        titulo: "Treinamento e Capacitacao",
+        descricao:
+          "Formacao de servidores em licitacoes, sistemas federais, gestao de pessoas e metodologias de ensino.",
+        icone: "BookOpen",
+        ordem: 6,
+        acessos: 60,
         ativo: true,
         criado_por: 1,
         criado_em: new Date(),

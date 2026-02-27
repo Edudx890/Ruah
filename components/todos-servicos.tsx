@@ -86,18 +86,18 @@ export function TodosServicos() {
               <Card
                 key={servico.id}
                 onClick={() => incrementarAcesso(servico.id)}
-                className="border-border bg-card hover:border-gold transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 cursor-pointer"
+                className="border-border bg-gold-aged hover:border-gold transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 cursor-pointer"
               >
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center mb-4 border-2 border-gold/20">
+                  <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center mb-4 border-2 border-gold/30">
                     <Icone className="w-7 h-7 text-gold" />
                   </div>
-                  <CardTitle className="font-serif text-xl text-card-foreground">{servico.titulo}</CardTitle>
+                  <CardTitle className="font-serif text-xl text-cream">{servico.titulo}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-card-foreground/70 leading-relaxed">{servico.descricao}</p>
+                  <p className="text-cream/70 leading-relaxed">{servico.descricao}</p>
                   <div className="mt-4 pt-4 border-t border-border">
-                    <p className="text-xs text-card-foreground/50">{servico.acessos} visualizações</p>
+                    <p className="text-xs text-cream/50">{servico.acessos} visualizações</p>
                   </div>
                 </CardContent>
               </Card>
@@ -107,7 +107,7 @@ export function TodosServicos() {
 
         {servicos.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-card-foreground/70">Nenhum serviço disponível no momento</p>
+            <p className="text-cream/70">Nenhum serviço disponível no momento</p>
           </div>
         )}
       </div>

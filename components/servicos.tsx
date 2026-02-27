@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Compass, Landmark, ClipboardList, Globe, ArrowRight } from "lucide-react"
+import { Compass, Landmark, ClipboardList, Globe, ArrowRight, GraduationCap, HeartPulse, ShieldCheck, BookOpen, Briefcase, Users } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
@@ -10,8 +10,13 @@ const icones: Record<string, any> = {
   Landmark,
   ClipboardList,
   Globe,
-  Building2: Compass,
-  Users: Landmark,
+  GraduationCap,
+  HeartPulse,
+  ShieldCheck,
+  BookOpen,
+  Briefcase,
+  Users,
+  Building2: Landmark,
 }
 
 interface Servico {

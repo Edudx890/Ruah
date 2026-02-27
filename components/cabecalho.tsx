@@ -73,13 +73,13 @@ export function Cabecalho() {
           {/* Logo */}
           <Link href="/" className="relative block">
             <Image
-              src="/images/logo-ruah.jpeg"
+              src="/images/logo-ruah.png"
               alt="RUAH Assessoria, Consultoria e Comercio"
-              width={120}
-              height={60}
-              className="h-10 md:h-14 w-auto object-contain rounded-sm transition-all duration-300"
+              width={140}
+              height={70}
+              className="h-11 md:h-16 w-auto object-contain transition-all duration-300"
               style={{
-                filter: rolou ? "none" : "brightness(1.8) contrast(0.9)",
+                filter: rolou ? "none" : "brightness(1.6) saturate(0.8)",
               }}
               priority
             />
