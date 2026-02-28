@@ -74,7 +74,7 @@ export function TodosServicos() {
             Todas as Nossas <span className="text-gold">Soluções Estratégicas</span>
           </h1>
           <p className="text-lg text-cream/70 max-w-2xl mx-auto">
-            Conheça todo o portfólio de serviços que oferecemos para conectar o setor privado ao público
+            Conheça todo o portfólio de serviços que oferecemos para conectar o setor privado ao público.
           </p>
           <div className="mt-6 w-24 h-1 bg-gold rounded-full mx-auto" />
         </div>
