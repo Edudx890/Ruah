@@ -24,7 +24,7 @@ export function SobreNos() {
             <img
               src="/images/consultoria-governo.jpg"
               alt="Sala de reunioes executiva - consultoria estrategica"
-              // className="w-full h-80 lg:h-[28rem] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-80 lg:h-[28rem] object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>
 
