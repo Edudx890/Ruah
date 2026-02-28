@@ -29,31 +29,38 @@ export function SobreNos() {
           </div>
 
           {/* Texto institucional */}
-          <div className="text-ruah-brown-light leading-relaxed">
+          <div className="text-ruah-brown-light leading-relaxed text-center">
             <p className="mb-6 text-lg">
-              A <strong className="text-ruah-brown font-semibold">RUAH Assessoria, Consultoria e comércio</strong> e
-              uma organizacao de vanguarda dedicada a excelencia e ao fortalecimento da gestao publica em suas diversas
-              esferas.
+              A <strong className="text-ruah-brown font-semibold">
+                RUAH Assessoria, Consultoria e comércio
+              </strong>{" "}
+              é uma organização de vanguarda dedicada à excelência e ao fortalecimento da
+              gestão pública em suas diversas esferas.
             </p>
+            
             <p className="mb-6 text-lg">
-              Com representacao estrategica em Brasilia, atuamos como um braco tecnico indispensavel para os municipios,
-              especializando-nos na resolucao de gargalos junto aos orgaos federais e na viabilizacao de fluxos
+              Com representação estratégica em Brasília, atuamos como um braço técnico
+              indispensável para os municípios, especializando-nos na resolução de
+              gargalos junto aos órgãos federais e na viabilização de fluxos
               administrativos complexos.
             </p>
+            
             <p className="mb-8 text-lg">
-              Nossa missao e oxigenar a administracao publica por meio de metodologias eticas e soluções inteligentes
-              que assegurem o crescimento sustentavel e a eficiencia no trato do bem comum.
+              Nossa missão é oxigenar a administração pública por meio de metodologias
+              éticas e soluções inteligentes que assegurem o crescimento sustentável e a
+              eficiência no trato do bem comum.
             </p>
-
-            {/* Botao download portfolio */}
+            
+            {/* Botão download portfolio */}
             <a
               href="/portfolio-ruah.pdf"
               download="Portfolio-RUAH.pdf"
-              className="inline-flex items-center gap-3 border-2 border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300"
+              className="inline-flex items-center justify-center gap-3 border-2 border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300"
             >
               <Download className="w-4 h-4" />
-              Baixar Portfolio
+              Baixar Portfólio
             </a>
+          </div>
 
             <div className="mt-10 flex gap-8">
               <div className="text-center">
