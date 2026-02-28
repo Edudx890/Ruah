@@ -74,7 +74,7 @@ export function Cabecalho() {
           <Link href="/" className="relative block">
             <Image
               src="/images/logo-ruah.png"
-              alt="RUAH Assessoria, Consultoria e Comercio"
+              alt="RUAH Assessoria, Consultoria e comércio"
               width={140}
               height={70}
               className="h-11 md:h-16 w-auto object-contain transition-all duration-300"

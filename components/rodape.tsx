@@ -5,7 +5,7 @@ export function Rodape() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h4 className="font-serif text-2xl mb-1 text-ruah-beige">RUAH</h4>
-            <p className="text-sm text-ruah-sand">Assessoria, Consultoria e Comercio LTDA</p>
+            <p className="text-sm text-ruah-sand">Assessoria, Consultoria e comércio LTDA</p>
             <p className="text-xs text-ruah-sand/70 mt-1">CNPJ: 54.522.139/0001-24</p>
           </div>
           <div className="text-center text-sm text-ruah-sand">

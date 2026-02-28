@@ -134,7 +134,7 @@ export function Contato() {
                 {"Consultoria e Com\u00E9rcio"}
               </h3>
               <p className="text-ruah-brown-light leading-relaxed mb-8">
-                Estamos prontos para entender suas necessidades e desenvolver solucoes sob medida para seu negocio.
+                Estamos prontos para entender suas necessidades e desenvolver soluções sob medida para seu negócio.
               </p>
             </div>
 

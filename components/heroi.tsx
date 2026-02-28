@@ -46,7 +46,7 @@ export function Heroi() {
           <div className="w-24 h-1 bg-ruah-gold mx-auto mb-8" />
         </div>
         <p className="text-ruah-gold text-sm md:text-base tracking-[0.3em] uppercase mb-6">
-          Assessoria, Consultoria e Comercio
+          Assessoria, Consultoria e comércio
         </p>
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-ruah-warm-white mb-4 leading-tight tracking-wide">
           Conectamos
@@ -54,7 +54,7 @@ export function Heroi() {
           <span className="text-ruah-gold italic">Estrategia e Resultado</span>
         </h1>
         <p className="text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-12 text-ruah-beige">
-          Solucoes estrategicas que transformam desafios em oportunidades,
+          Soluções estrategicas que transformam desafios em oportunidades,
           com a excelencia e a confianca que o seu projeto merece.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

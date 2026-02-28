@@ -22,7 +22,7 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "RUAH Assessoria | Conectando Setores, Construindo Futuros",
   description:
-    "Assessoria estrategica de alto padrao conectando setor privado e governamental. Excelencia em consultoria, gestao de projetos e comercio internacional.",
+    "Assessoria estrategica de alto padrao conectando setor privado e governamental. Excelencia em consultoria, gestao de projetos e comércio internacional.",
     generator: 'v0.app'
 }
 

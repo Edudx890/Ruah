@@ -31,7 +31,7 @@ export function SobreNos() {
           {/* Texto institucional */}
           <div className="text-ruah-brown-light leading-relaxed">
             <p className="mb-6 text-lg">
-              A <strong className="text-ruah-brown font-semibold">RUAH Assessoria, Consultoria e Comercio</strong> e
+              A <strong className="text-ruah-brown font-semibold">RUAH Assessoria, Consultoria e comércio</strong> e
               uma organizacao de vanguarda dedicada a excelencia e ao fortalecimento da gestao publica em suas diversas
               esferas.
             </p>
@@ -41,7 +41,7 @@ export function SobreNos() {
               administrativos complexos.
             </p>
             <p className="mb-8 text-lg">
-              Nossa missao e oxigenar a administracao publica por meio de metodologias eticas e solucoes inteligentes
+              Nossa missao e oxigenar a administracao publica por meio de metodologias eticas e soluções inteligentes
               que assegurem o crescimento sustentavel e a eficiencia no trato do bem comum.
             </p>
 
