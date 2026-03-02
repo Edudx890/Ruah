@@ -29,7 +29,7 @@ export function Heroi() {
           src="/images/brasilia-noturna.jpg"
           alt="Vista noturna de Brasilia"
           className="w-full h-full object-cover"
-          style={{ filter: "blur(1.5px)" }}
+          style={{ filter: "blur(0.5px)" }}
           crossOrigin="anonymous"
         />
         <div
