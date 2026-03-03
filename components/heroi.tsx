@@ -6,7 +6,7 @@ export function Heroi() {
   const rolarParaContato = () => {
     const elemento = document.getElementById("contato")
     if (elemento) {
-      const deslocamento = 80
+      const deslocamento = 0
       const posicao = elemento.getBoundingClientRect().top + window.pageYOffset - deslocamento
       window.scrollTo({ top: posicao, behavior: "smooth" })
     }
@@ -15,7 +15,7 @@ export function Heroi() {
   const rolarParaSobre = () => {
     const elemento = document.getElementById("sobre")
     if (elemento) {
-      const deslocamento = 80
+      const deslocamento = 0
       const posicao = elemento.getBoundingClientRect().top + window.pageYOffset - deslocamento
       window.scrollTo({ top: posicao, behavior: "smooth" })
     }
@@ -31,6 +31,13 @@ export function Heroi() {
           className="w-full h-full object-cover"
           style={{ filter: "blur(0.1px)" }}
           crossOrigin="anonymous"
+        />
+
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to bottom, rgba(62, 51, 35, 0.26), rgba(24, 18, 12, 0.62), rgba(62, 39, 35, 0.8))",
+          }}
         />
       </div>
 

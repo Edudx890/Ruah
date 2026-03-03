@@ -1,4 +1,10 @@
 import { Download } from "lucide-react"
+import { Playfair_Display } from "next/font/google"
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+})
 
 export function SobreNos() {
   return (
@@ -17,10 +23,11 @@ export function SobreNos() {
           <span className="text-ruah-gold text-sm tracking-[0.3em] uppercase mb-4 block">
             A Essência da RUAH
           </span>
-
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-ruah-brown mb-6">
-            Quem Somos
-          </h2>
+<h2
+  className={`text-4xl md:text-5xl lg:text-6xl text-ruah-brown mb-6 ${playfair.className}`}
+>
+  Quem Somos
+</h2>
 
           <div className="w-24 h-0.5 bg-ruah-gold mx-auto" />
         </div>
@@ -38,7 +45,7 @@ export function SobreNos() {
           </div>
 
           {/* Texto */}
-          <div className="text-ruah-brown-light leading-relaxed text-center lg:text-left font-sans">
+          <div className="text-ruah-brown-light leading-relaxed text-center max-w-3xl mx-auto">
             
             <p className="mb-6 text-lg">
               A{" "}
