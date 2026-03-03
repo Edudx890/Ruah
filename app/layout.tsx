@@ -33,7 +33,7 @@ export default function LayoutRaiz({
   return (
     <html lang="pt-BR">
       {/* Fonte aplicada globalmente aqui */}
-      <body className={.className}>
+      <body className={lato.className}>
         <Suspense fallback={null}>
           {children}
           <Toaster />
