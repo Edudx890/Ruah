@@ -29,14 +29,8 @@ export function Heroi() {
           src="/images/brasilia-noturna.jpg"
           alt="Vista noturna de Brasilia"
           className="w-full h-full object-cover"
-          style={{ filter: "blur(0.5px)" }}
+          style={{ filter: "blur(0.1px)" }}
           crossOrigin="anonymous"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(to bottom, rgba(62,39,35,0.85), rgba(62,39,35,0.7), rgba(62,39,35,0.9))",
-          }}
         />
       </div>
 
