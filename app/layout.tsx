@@ -22,8 +22,8 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "RUAH Assessoria | Conectando Setores, Construindo Futuros",
   description:
-    "Assessoria estrategica de alto padrao conectando setor privado e governamental. Excelencia em consultoria, gestao de projetos e comércio internacional.",
-    generator: 'v0.app'
+    "Assessoria estratégica de alto padrão conectando setor privado e governamental. Excelência em consultoria, gestão de projetos e comércio internacional.",
+  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
@@ -39,7 +39,14 @@ export default function LayoutRaiz({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`font-sans ${playfairDisplay.variable} ${lato.variable}`}>
+      <body
+        className={`
+          ${playfairDisplay.variable} 
+          ${lato.variable} 
+          font-sans 
+          antialiased
+        `}
+      >
         <Suspense fallback={null}>
           {children}
           <Toaster />
