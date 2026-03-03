@@ -111,7 +111,7 @@ export function Cabecalho() {
                     className="border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown"
                   >
                     <Settings className="w-4 h-4 mr-1" />
-                    Admin
+                    Adminn
                   </Button>
                 </Link>
 
