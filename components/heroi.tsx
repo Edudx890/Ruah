@@ -77,7 +77,7 @@ export function Heroi() {
       {/* Indicador de scroll */}
       <button
         onClick={rolarParaSobre}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        className="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce"
         aria-label="Rolar para baixo"
       >
         <ChevronDown className="w-8 h-8 text-ruah-gold/60" />
