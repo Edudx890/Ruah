@@ -73,7 +73,7 @@ export function SobreNos() {
             <div className="flex justify-center lg:justify-start">
               <a
                 href="/portfólio-ruah.pdf"
-                download="portfólio-RUAH.pdf"
+                download="portfolio-RUAH.pdf"
                 className="inline-flex items-center justify-center gap-3 border-2 border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300"
               >
                 <Download className="w-4 h-4" />
