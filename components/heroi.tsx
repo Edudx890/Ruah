@@ -27,7 +27,7 @@ export function Heroi() {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/brasilia-noturna.jpg"
-          alt="Vista noturna de Brasilia"
+          alt="Vista noturna de Brasília"
           className="w-full h-full object-cover"
           style={{ filter: "blur(0.1px)" }}
           crossOrigin="anonymous"
@@ -52,11 +52,11 @@ export function Heroi() {
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-ruah-warm-white mb-4 leading-tight tracking-wide">
           Conectamos
           <br />
-          <span className="text-ruah-gold italic">Estrategia e Resultado</span>
+          <span className="text-ruah-gold italic">Estratégia e Resultado</span>
         </h1>
         <p className="text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-12 text-ruah-beige">
-          Soluções estrategicas que transformam desafios em oportunidades,
-          com a excelencia e a confianca que o seu projeto merece.
+          Soluções estratégicas que transformam desafios em oportunidades,
+          com a excelência e a confiança que o seu projeto merece.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
@@ -69,7 +69,7 @@ export function Heroi() {
             onClick={rolarParaSobre}
             className="inline-block border-2 border-ruah-warm-white/40 text-ruah-warm-white/80 hover:border-ruah-warm-white hover:text-ruah-warm-white px-10 py-4 text-sm tracking-[0.15em] uppercase transition-all duration-300"
           >
-            Conheca a RUAH
+            Conheça a RUAH
           </button>
         </div>
       </div>

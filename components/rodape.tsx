@@ -10,7 +10,7 @@ export function Rodape() {
           </div>
           <div className="text-center text-sm text-ruah-sand">
             <p>SAUS Q 5 BL K N 17, Sala 0403</p>
-            <p>Asa Sul, Brasilia - DF | 70.070-050</p>
+            <p>Asa Sul, Brasília - DF | 70.070-050</p>
           </div>
           <div className="text-center md:text-right">
             <p className="text-sm text-ruah-sand">

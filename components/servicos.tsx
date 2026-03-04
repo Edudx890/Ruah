@@ -89,7 +89,7 @@ export function Servicos() {
     return (
       <section id="servicos" className="py-24 md:py-32 bg-ruah-beige">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-ruah-brown-light">Carregando servicos...</p>
+          <p className="text-ruah-brown-light">Carregando serviços...</p>
         </div>
       </section>
     )
@@ -100,7 +100,7 @@ export function Servicos() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <span className="text-ruah-gold text-sm tracking-[0.3em] uppercase mb-4 block">
-            Portfolio
+            portfólio
           </span>
           <h2
             onClick={handleTituloClick}
@@ -109,7 +109,7 @@ export function Servicos() {
             {"SOLU\u00C7\u00D5ES ESTRAT\u00C9GICAS"}
           </h2>
           <p className="text-ruah-brown-light text-lg md:text-xl max-w-2xl mx-auto font-light">
-            Oferecemos um portfolio completo de servicos para conectar o setor privado ao publico com excelencia
+            Oferecemos um portfólio completo de servicos para conectar o setor privado ao público com excelência
           </p>
           <div className="w-24 h-0.5 bg-ruah-gold mx-auto mt-8" />
         </div>
@@ -139,7 +139,7 @@ export function Servicos() {
               href="/servicos"
               className="inline-flex items-center border-2 border-ruah-gold text-ruah-gold hover:bg-ruah-gold hover:text-ruah-brown px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300"
             >
-              Ver Todos os Servicos
+              Ver Todos os Serviços
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>

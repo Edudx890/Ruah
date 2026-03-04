@@ -77,9 +77,9 @@ async function inicializarDados() {
     servicos.push(
       {
         id: proximoIdServico++,
-        titulo: "Gestao Publica",
+        titulo: "gestão Pública",
         descricao:
-          "Consultoria estrategica, assessoria em licitacoes, gestao de projetos, compliance e reengenharia administrativa para municipios.",
+          "Consultoria estratégica, assessoria em licitações, gestão de projetos, compliance e reengenharia administrativa para municípios.",
         icone: "Landmark",
         ordem: 1,
         acessos: 150,
@@ -89,9 +89,9 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Educacao",
+        titulo: "Educação",
         descricao:
-          "Apoio tecnico ao PAR/FNDE, formacao continuada de professores, curriculo alinhado a BNCC e captacao de recursos federais.",
+          "Apoio técnico ao PAR/FNDE, formação continuada de professores, currículo alinhado a BNCC e captação de recursos federais.",
         icone: "GraduationCap",
         ordem: 2,
         acessos: 120,
@@ -101,9 +101,9 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Saude e Assistencia Social",
+        titulo: "Saúde e Assistência Social",
         descricao:
-          "Assessoria tecnica na gestao do SUS, fortalecimento do SUAS, monitoramento de indicadores e captacao de repasses federais.",
+          "Assessoria técnica na gestão do SUS, fortalecimento do SUAS, monitoramento de indicadores e captação de repasses federais.",
         icone: "HeartPulse",
         ordem: 3,
         acessos: 95,
@@ -113,9 +113,9 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Relacoes Internacionais",
+        titulo: "Relações Internacionais",
         descricao:
-          "Suporte a embaixadas e organismos internacionais, gestao de eventos diplomaticos e cerimonial de Estado.",
+          "Suporte a embaixadas e organismos internacionais, gestão de eventos diplomáticos e cerimonial de Estado.",
         icone: "Globe",
         ordem: 4,
         acessos: 80,
@@ -139,7 +139,7 @@ async function inicializarDados() {
         id: proximoIdServico++,
         titulo: "Treinamento e Capacitacao",
         descricao:
-          "Formacao de servidores em licitacoes, sistemas federais, gestao de pessoas e metodologias de ensino.",
+          "formação de servidores em licitações, sistemas federais, gestão de pessoas e metodologias de ensino.",
         icone: "BookOpen",
         ordem: 6,
         acessos: 60,

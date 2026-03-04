@@ -59,7 +59,7 @@ export function Contato() {
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-ruah-brown mb-6">Fale Conosco</h2>
           <p className="text-ruah-brown-light text-lg">
-            Entre em contato para discutir como podemos ajudar sua organizacao
+            Entre em contato para discutir como podemos ajudar sua organização
           </p>
           <div className="w-24 h-0.5 bg-ruah-gold mx-auto mt-8" />
         </div>
@@ -171,9 +171,9 @@ export function Contato() {
                   <MapPin className="w-5 h-5 text-ruah-gold" />
                 </div>
                 <div>
-                  <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Escritorio</p>
+                  <p className="text-sm tracking-[0.15em] uppercase text-ruah-brown mb-1">Escritório</p>
                   <p className="text-ruah-brown-light">SAUS Q 5 BL K N 17, Sala 0403</p>
-                  <p className="text-ruah-brown-light">Asa Sul, Brasilia - DF</p>
+                  <p className="text-ruah-brown-light">Asa Sul, Brasília - DF</p>
                 </div>
               </div>
             </div>
