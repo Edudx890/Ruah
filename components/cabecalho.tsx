@@ -60,7 +60,7 @@ export function Cabecalho() {
 
   return (
     <nav className="fixed w-full z-50 bg-ruah-cream shadow-md">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-3 py-1">
         <div className="flex justify-between items-center">
 
           {/* Logo */}
