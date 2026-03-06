@@ -5,10 +5,10 @@ import { Phone, Mail, MapPin } from "lucide-react"
 export function Contato() {
   return (
     <section id="contato" className="py-20 md:py-32 bg-ruah-cream">
-      <div className="container mx-auto px-6 max-w-4xl">
+      <div className="container mx-auto px-6 max-w-5xl">
 
         {/* Título */}
-        <div className="text-center mb-14 md:mb-16">
+        <div className="text-center mb-16">
           <span className="text-ruah-gold text-xs md:text-sm tracking-[0.3em] uppercase mb-4 block">
             Conecte-se
           </span>
@@ -18,95 +18,89 @@ export function Contato() {
           </h2>
 
           <p className="text-ruah-brown-light text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Para entrar em contato com nossa equipe utilize os canais abaixo.
-            Ao clicar no email seu aplicativo de email será aberto automaticamente.
+            Entre em contato através dos canais abaixo. Ao clicar no email ou telefone,
+            seu dispositivo abrirá automaticamente o aplicativo correspondente.
           </p>
 
-          <div className="w-20 md:w-24 h-0.5 bg-ruah-gold mx-auto mt-8" />
+          <div className="w-24 h-[2px] bg-ruah-gold mx-auto mt-8" />
         </div>
 
-        {/* Card */}
-        <div className="bg-white p-8 md:p-14 rounded-sm shadow-lg border border-ruah-sand">
+        {/* Cards de Contato */}
+        <div className="grid md:grid-cols-3 gap-8">
 
-          <div className="flex flex-col gap-10">
+          {/* Telefone */}
+          <div className="bg-white border border-ruah-sand p-8 rounded-sm shadow-md hover:shadow-xl transition-all duration-300 group">
 
-            {/* Telefones */}
-            <div className="flex items-start gap-5 md:gap-6 group">
-
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
-                <Phone className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
-              </div>
-
-              <div className="flex-1">
-                <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-ruah-brown mb-2">
-                  Telefones
-                </p>
-
-                <a
-                  href="tel:+5579988565263"
-                  className="block text-base md:text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors"
-                >
-                  +55 (79) 9 8856-5263
-                </a>
-
-                <a
-                  href="tel:+5531972325289"
-                  className="block text-base md:text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors"
-                >
-                  +55 (31) 9 7232-5289
-                </a>
-              </div>
-
+            <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full mb-6 group-hover:bg-ruah-gold/20 transition-colors">
+              <Phone className="w-4 h-4 text-ruah-gold" />
             </div>
 
-            {/* Email */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6 group">
+            <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown mb-4">
+              Telefones
+            </p>
 
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
-                <Mail className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
-              </div>
+            <a
+              href="tel:+5579988565263"
+              className="block text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors"
+            >
+              +55 (79) 9 8856-5263
+            </a>
 
-              <div className="flex-1">
-                <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-ruah-brown mb-3">
-                  Email
-                </p>
+            <a
+              href="tel:+5531972325289"
+              className="block text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors"
+            >
+              +55 (31) 9 7232-5289
+            </a>
 
-                <a
-                  href="mailto:seuemail@dominio.com"
-                  className="block w-full text-center bg-ruah-brown text-ruah-warm-white py-4 px-6 text-xs md:text-sm tracking-[0.15em] uppercase hover:bg-ruah-gold transition-all duration-300 shadow-md hover:shadow-lg rounded-sm"
-                >
-                  Entrar em contato por email
-                </a>
+          </div>
 
-                <p className="text-xs md:text-sm text-ruah-brown-light mt-3 leading-relaxed">
-                  Ao clicar, seu aplicativo de email será aberto para enviar sua mensagem.
-                </p>
-              </div>
+          {/* Email */}
+          <div className="bg-white border border-ruah-sand p-8 rounded-sm shadow-md hover:shadow-xl transition-all duration-300 group">
 
+            <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full mb-6 group-hover:bg-ruah-gold/20 transition-colors">
+              <Mail className="w-4 h-4 text-ruah-gold" />
             </div>
 
-            {/* Endereço */}
-            <div className="flex items-start gap-5 md:gap-6 group">
+            <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown mb-4">
+              Email
+            </p>
 
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
-                <MapPin className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
-              </div>
+            <a
+              href="mailto:seuemail@dominio.com"
+              className="text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors break-all"
+            >
+              seuemail@dominio.com
+            </a>
 
-              <div>
-                <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-ruah-brown mb-2">
-                  Escritório
-                </p>
+            <p className="text-sm text-ruah-brown-light mt-4">
+              Clique para abrir seu aplicativo de email.
+            </p>
 
-                <p className="text-base md:text-lg text-ruah-brown-light">
-                  SAUS Q 5 BL K N 17, Sala 0403
-                </p>
+          </div>
 
-                <p className="text-base md:text-lg text-ruah-brown-light">
-                  Asa Sul, Brasília - DF
-                </p>
-              </div>
+          {/* Endereço */}
+          <div className="bg-white border border-ruah-sand p-8 rounded-sm shadow-md hover:shadow-xl transition-all duration-300 group">
 
+            <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full mb-6 group-hover:bg-ruah-gold/20 transition-colors">
+              <MapPin className="w-4 h-4 text-ruah-gold" />
             </div>
+
+            <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown mb-4">
+              Escritório
+            </p>
+
+            <p className="text-lg text-ruah-brown-light">
+              SAUS Q 5 BL K N 17
+            </p>
+
+            <p className="text-lg text-ruah-brown-light">
+              Sala 0403
+            </p>
+
+            <p className="text-lg text-ruah-brown-light">
+              Asa Sul, Brasília - DF
+            </p>
 
           </div>
 
