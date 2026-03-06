@@ -33,7 +33,7 @@ export function Contato() {
             {/* Telefones */}
             <div className="flex items-start gap-5 md:gap-6 group">
 
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
                 <Phone className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
               </div>
 
@@ -62,11 +62,11 @@ export function Contato() {
             {/* Email */}
             <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6 group">
 
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
                 <Mail className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
               </div>
 
-              <div className="flex-1 w-full">
+              <div className="flex-1">
                 <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-ruah-brown mb-3">
                   Email
                 </p>
@@ -88,7 +88,7 @@ export function Contato() {
             {/* Endereço */}
             <div className="flex items-start gap-5 md:gap-6 group">
 
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
                 <MapPin className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
               </div>
 
