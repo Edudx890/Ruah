@@ -25,19 +25,21 @@ export function Contato() {
           <div className="w-24 h-[2px] bg-ruah-gold mx-auto mt-8" />
         </div>
 
-        {/* Cards de Contato */}
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8">
 
           {/* Telefone */}
           <div className="bg-white border border-ruah-sand p-8 rounded-sm shadow-md hover:shadow-xl transition-all duration-300 group">
 
-            <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full mb-6 group-hover:bg-ruah-gold/20 transition-colors">
-              <Phone className="w-4 h-4 text-ruah-gold" />
-            </div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full group-hover:bg-ruah-gold/20 transition-colors">
+                <Phone className="w-4 h-4 text-ruah-gold" />
+              </div>
 
-            <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown mb-4">
-              Telefones
-            </p>
+              <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown">
+                Telefones
+              </p>
+            </div>
 
             <a
               href="tel:+5579988565263"
@@ -58,23 +60,25 @@ export function Contato() {
           {/* Email */}
           <div className="bg-white border border-ruah-sand p-8 rounded-sm shadow-md hover:shadow-xl transition-all duration-300 group">
 
-            <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full mb-6 group-hover:bg-ruah-gold/20 transition-colors">
-              <Mail className="w-4 h-4 text-ruah-gold" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full group-hover:bg-ruah-gold/20 transition-colors">
+                <Mail className="w-4 h-4 text-ruah-gold" />
+              </div>
+
+              <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown">
+                Email
+              </p>
             </div>
 
-            <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown mb-4">
-              Email
-            </p>
-
             <a
-              href="mailto:ruah.assconsult@gmail.com"
+              href="mailto:ruah.assconsult@gmail.com?subject=Contato%20pelo%20site%20Ruah%20Consultoria"
               className="block w-full text-center bg-ruah-brown text-ruah-warm-white py-4 px-6 text-xs md:text-sm tracking-[0.15em] uppercase hover:bg-ruah-gold transition-all duration-300 shadow-md hover:shadow-lg rounded-sm"
             >
-              ruah.assconsult@gmail.com
+              Enviar Email
             </a>
 
-            <p className="text-sm text-ruah-brown-light mt-4">
-              Clique para abrir seu aplicativo de email.
+            <p className="text-sm text-ruah-brown-light mt-4 break-all">
+              ruah.assconsult@gmail.com
             </p>
 
           </div>
@@ -82,13 +86,15 @@ export function Contato() {
           {/* Endereço */}
           <div className="bg-white border border-ruah-sand p-8 rounded-sm shadow-md hover:shadow-xl transition-all duration-300 group">
 
-            <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full mb-6 group-hover:bg-ruah-gold/20 transition-colors">
-              <MapPin className="w-4 h-4 text-ruah-gold" />
-            </div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-ruah-beige flex items-center justify-center rounded-full group-hover:bg-ruah-gold/20 transition-colors">
+                <MapPin className="w-4 h-4 text-ruah-gold" />
+              </div>
 
-            <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown mb-4">
-              Escritório
-            </p>
+              <p className="text-xs tracking-[0.2em] uppercase text-ruah-brown">
+                Escritório
+              </p>
+            </div>
 
             <p className="text-lg text-ruah-brown-light">
               SAUS Q 5 BL K N 17
