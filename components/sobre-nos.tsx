@@ -65,7 +65,7 @@ export function SobreNos() {
 
             <p className="mb-10 text-lg">
               Nossa missão é oxigenar a administração pública por meio de
-              metodologias éticas e soluções inteligentes que possibilitam o
+              metodologias éticas e soluções inteligentes que promovem o
               crescimento sustentável e a eficiência no trato do bem comum.
             </p>
 
