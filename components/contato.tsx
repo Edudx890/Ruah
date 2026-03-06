@@ -34,7 +34,7 @@ export function Contato() {
             <div className="flex items-start gap-5 md:gap-6 group">
 
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
-                <Phone className="w-5 h-5 md:w-6 md:h-6 text-ruah-gold" />
+                <Phone className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
               </div>
 
               <div className="flex-1">
@@ -63,7 +63,7 @@ export function Contato() {
             <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6 group">
 
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
-                <Mail className="w-5 h-5 md:w-6 md:h-6 text-ruah-gold" />
+                <Mail className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
               </div>
 
               <div className="flex-1 w-full">
@@ -89,7 +89,7 @@ export function Contato() {
             <div className="flex items-start gap-5 md:gap-6 group">
 
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-ruah-beige flex items-center justify-center shrink-0 group-hover:bg-ruah-gold/20 transition-colors">
-                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-ruah-gold" />
+                <MapPin className="w-3 h-3 md:w-4 md:h-4 text-ruah-gold" />
               </div>
 
               <div>
