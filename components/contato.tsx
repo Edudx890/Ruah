@@ -66,19 +66,12 @@ export function Contato() {
               Email
             </p>
 
-            {/* <a
+            <a
               href="mailto:ruah.assconsult@gmail.com"
-              className="text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors break-all"
+              className="block w-full text-center bg-ruah-brown text-ruah-warm-white py-4 px-6 text-xs md:text-sm tracking-[0.15em] uppercase hover:bg-ruah-gold transition-all duration-300 shadow-md hover:shadow-lg rounded-sm"
             >
               ruah.assconsult@gmail.com
-            </a> */}
-
-                <a
-                  href="ruah.assconsult@gmail.com"
-                  className="block w-full text-center bg-ruah-brown text-ruah-warm-white py-4 px-6 text-xs md:text-sm tracking-[0.15em] uppercase hover:bg-ruah-gold transition-all duration-300 shadow-md hover:shadow-lg rounded-sm"
-                >
-                  ruah.assconsult@gmail.com
-                </a>
+            </a>
 
             <p className="text-sm text-ruah-brown-light mt-4">
               Clique para abrir seu aplicativo de email.
