@@ -42,6 +42,13 @@ export function Contato() {
             </div>
 
             <a
+              href="tel:+5561998234976"
+              className="block text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors"
+            >
+              +55 (61) 9 9823-4976
+            </a>
+
+            <a
               href="tel:+5579988565263"
               className="block text-lg text-ruah-brown-light hover:text-ruah-gold transition-colors"
             >
