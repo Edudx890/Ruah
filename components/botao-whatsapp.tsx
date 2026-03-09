@@ -16,7 +16,7 @@ export function BotaoWhatsApp() {
 
   return (
     <a
-      href="https://wa.me/5579988565263"
+      href="https://wa.me/5561998234976"
       target="_blank"
       rel="noopener noreferrer"
       className={`fixed bottom-6 right-6 bg-ruah-gold hover:bg-ruah-gold-light text-ruah-warm-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-50 group flex items-center justify-center w-14 h-14 ${
