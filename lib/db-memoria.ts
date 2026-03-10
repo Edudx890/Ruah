@@ -77,7 +77,7 @@ async function inicializarDados() {
     servicos.push(
       {
         id: proximoIdServico++,
-        titulo: "gestão Pública",
+        titulo: "Gestão Pública",
         descricao:
           "Consultoria estratégica, assessoria em licitações, gestão de projetos, compliance e reengenharia administrativa para municípios.",
         icone: "Landmark",
@@ -137,7 +137,7 @@ async function inicializarDados() {
       },
       {
         id: proximoIdServico++,
-        titulo: "Treinamento e Capacitacao",
+        titulo: "Treinamento e Capacitação",
         descricao:
           "formação de servidores em licitações, sistemas federais, gestão de pessoas e metodologias de ensino.",
         icone: "BookOpen",
